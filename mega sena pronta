@@ -85,7 +85,7 @@ function MegaSena(): void
       
       $quantidadeDezenas = readline("Quantas dezenas cada jogo (entre 6 e 20): ");
    
-   }while (6 >= $quantidadeDezenas & $quantidadeDezenas >= 20);
+   }while (6 >= $quantidadeDezenas || $quantidadeDezenas >= 20);
       
    
    for ($i = 0; $i <  $quantidadeJogos; $i++) {
@@ -147,7 +147,7 @@ function Quina(): void
       
       $quantidadeDezenas = readline("Quantas dezenas cada jogo (entre 5 e 15): ");
    
-   }while (5 >= $quantidadeDezenas & $quantidadeDezenas >= 15);
+   }while (5 >= $quantidadeDezenas || $quantidadeDezenas >= 15);
 
    for ($i = 0; $i <  $quantidadeJogos; $i++) {
       $dezenas = SorteioEVerificacao($quantidadeDezenas, 1, 80);
@@ -240,7 +240,7 @@ function Lotofacil(): void
       
       $quantidadeDezenas = readline("Quantas dezenas cada jogo (entre 15 e 20): ");
    
-   }while (15 >= $quantidadeDezenas & $quantidadeDezenas >= 20);
+   }while (15 >= $quantidadeDezenas || $quantidadeDezenas >= 20);
 
    for ($i = 0; $i <  $quantidadeJogos; $i++) {
       $dezenas = SorteioEVerificacao($quantidadeDezenas, 1, 25);
