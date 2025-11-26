@@ -24,45 +24,46 @@ function menu(): void
         print("[5] Sair\n\033[0m");
 
         $opcao = trim(readline());
+        do {
+            switch ($opcao) {
+                case "1":
+                    print("Você escolheu a Mega Sena!\n");
+                    sleep(3);
+                    echo "\033[2J\033[;H";
+                    MegaSena();
+                    break;
 
-        switch ($opcao) {
-            case "1":
-                print("Você escolheu a Mega Sena!\n");
-                sleep(3);
-                echo "\033[2J\033[;H";
-                MegaSena();
-                break;
+                case "2":
+                    print("escolhido foi Quina\n");
+                    sleep(3);
+                    echo "\033[2J\033[;H";
+                    Quina();
+                    break;
 
-            case "2":
-                print("escolhido foi Quina\n");
-                sleep(3);
-                echo "\033[2J\033[;H";
-                Quina();
-                break;
+                case "3":
+                    print("escolhido foi Lotomania\n");
+                    sleep(3);
+                    echo "\033[2J\033[;H";
+                    Lotomania();
+                    break;
 
-            case "3":
-                print("escolhido foi Lotomania\n");
-                sleep(3);
-                echo "\033[2J\033[;H";
-                Lotomania();
-                break;
+                case "4":
+                    print("escolhido foi Lotofacil\n");
+                    sleep(3);
+                    echo "\033[2J\033[;H";
+                    Lotofacil();
+                    break;
 
-            case "4":
-                print("escolhido foi Lotofacil\n");
-                sleep(3);
-                echo "\033[2J\033[;H";
-                Lotofacil();
-                break;
+                case "5":
+                    print("Você saiu da caixa!\n");
+                    $continuar = false;
+                    break;
 
-            case "5":
-                print("Você saiu da caixa!\n");
-                $continuar = false;
-                break;
-
-            default:
-                $opcao = trim(readline(("Escolha uma opção válida:\n")));
-                break;
-        }
+                default:
+                    $opcao = trim(readline(("Escolha uma opção válida:\n")));
+                    break;
+            }
+        } while (!($opcao == 1 or $opcao == 2 or $opcao == 3 or $opcao == 4 or $opcao == 5));
     } while ($continuar);
 }
 
