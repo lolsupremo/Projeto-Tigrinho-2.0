@@ -107,7 +107,7 @@ function tabelaValoresMega($quantidadeDezenas)
 
     $tabela = [
         6 => 6,
-        7 => 420,
+        7 => 42,
         8 => 168,
         9 => 504,
         10 => 1260,
